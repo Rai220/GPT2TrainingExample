@@ -5,7 +5,7 @@
 python examples/run_lm_finetuning.py \
     --output_dir=output \
     --model_type=gpt2 \
-    --model_name_or_path=gpt2-large \
+    --model_name_or_path=gpt2-medium \
     --do_train \
     --train_data_file='dataset.txt' \
     --overwrite_output_dir\
