@@ -40,7 +40,8 @@ try:
 except:
     from tensorboardX import SummaryWriter
 
-from tqdm import tqdm, trange
+from tqdm import trange
+from tqdm.notebook import tqdm
 
 from transformers import (WEIGHTS_NAME, AdamW, get_linear_schedule_with_warmup,
                                   BertConfig, BertForMaskedLM, BertTokenizer,
