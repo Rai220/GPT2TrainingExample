@@ -8,6 +8,8 @@ python examples/run_lm_finetuning.py \
     --model_name_or_path=gpt2-medium \
     --do_train \
     --train_data_file='dataset.txt' \
+    --do_eval \
+    --eval_data_file='dataset_mini.txt' \
     --overwrite_output_dir\
     --block_size=200\
     --per_gpu_train_batch_size=1\
