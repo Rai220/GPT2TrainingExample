@@ -1,6 +1,6 @@
 #!/bin/sh
-    #--do_eval \
-    #--eval_data_file='input_data/val_harry.txt'\
+export LD_LIBRARY_PATH=/usr/local/cuda-11.2/lib64
+export CUDA_HOME=/usr/local/cuda-11.2
 
 python examples/run_lm_finetuning.py \
     --output_dir=output \
@@ -11,10 +11,11 @@ python examples/run_lm_finetuning.py \
     --do_eval \
     --eval_data_file='dataset_mini.txt' \
     --overwrite_output_dir\
-    --block_size=200\
+    --block_size=10\
     --per_gpu_train_batch_size=1\
-    --save_steps 1000 \
+    --save_steps 5000 \
     --num_train_epochs=3 \
-    --fp16_opt_level=O2 \
-    --fp16 \
     --evaluate_during_training
+
+    # --fp16_opt_level=O3 \
+    # --fp16 \
