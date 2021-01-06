@@ -5,7 +5,7 @@
 python examples/run_lm_finetuning.py \
     --output_dir=output \
     --model_type=gpt2 \
-    --model_name_or_path=gpt2-medium \
+    --model_name_or_path=gpt2-large \
     --do_train \
     --train_data_file='dataset.txt' \
     --do_eval \
@@ -13,5 +13,8 @@ python examples/run_lm_finetuning.py \
     --overwrite_output_dir\
     --block_size=200\
     --per_gpu_train_batch_size=1\
-    --save_steps 5000\
-    --num_train_epochs=1
+    --save_steps 1000 \
+    --num_train_epochs=3 \
+    --fp16_opt_level=03 \
+    --fp16 \
+    --evaluate_during_training
